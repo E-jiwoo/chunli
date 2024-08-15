@@ -5,7 +5,6 @@ import arrow_u from "../../assets/arrow_u.svg";
 import arrow_d from "../../assets/arrow_d.svg";
 
 const Index = () => {
-  // State variable to control which arrow image to show
   const [arrowState, setArrowState] = useState(1);
 
   const toggleArrow = () => {
