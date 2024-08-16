@@ -20,19 +20,32 @@ export const Team = styled.div`
 
 export const Box1 = styled.div`
   position: absolute;
+  width: 100vw;
+  height: 166px;
+  border: 4px #e6e6e6 solid;
+  border-bottom: none;
+  top: 270px;
 `;
 export const Box2 = styled.div`
   position: absolute;
-  top: 150px;
+  width: 100vw;
+  height: 166px;
+  border: 4px #e6e6e6 solid;
+  border-bottom: none;
+  top: 440px;
 `;
 export const Box3 = styled.div`
   position: absolute;
-  top: 300px;
+  width: 100vw;
+  height: 166px;
+  border: 4px #e6e6e6 solid;
+  top: 610px;
 `;
 
 export const Img = styled.img`
   position: relative;
-  top: 250px;
+  display: flex;
+  align-items: center;
   left: 75px;
 `;
 
@@ -42,13 +55,14 @@ export const Name = styled.div`
   font-size: 30px;
   font-family: "Pretendard";
   font-weight: 700;
-  top: 185px;
+  bottom: 60px;
   left: 280px;
+  display: flex;
+  align-items: center;
 `;
 export const Color = styled.div`
   color: #ff0000;
 `;
-
 export const MenuBox = styled.div`
   position: absolute;
   display: flex;
@@ -68,8 +82,10 @@ export const Menu = styled.div`
 
 export const Arrow = styled.img`
   position: relative;
-  top: 158px;
+  bottom: 85px;
   left: 630px;
+  display: flex;
+  align-items: center;
 `;
 
 export const TotalBox = styled.div`
@@ -97,18 +113,58 @@ export const PayBtn = styled.button`
   bottom: 70px;
 `;
 
-export const ExplanBox = styled.button`
+export const ExplanBox1 = styled.button`
   position: absolute;
   width: 100vw;
   height: 184px;
   background-color: #ae0000;
   border: none;
-  top: 400px;
-  left: 0px;
+  top: 166px;
   z-index: 10;
 `;
 
-export const Explan = styled.div`
+export const Explan1 = styled.div`
+  position: relative;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Pretendard";
+  font-weight: 100;
+  text-align: justify;
+  top: 5px;
+  left: 130px;
+`;
+export const ExplanBox2 = styled.button`
+  position: absolute;
+  width: 100vw;
+  height: 184px;
+  background-color: #ae0000;
+  border: none;
+  top: 166px;
+  z-index: 10;
+`;
+
+export const Explan2 = styled.div`
+  position: relative;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Pretendard";
+  font-weight: 100;
+  text-align: justify;
+  top: 5px;
+  left: 130px;
+`;
+
+export const ExplanBox3 = styled.button`
+  position: absolute;
+  width: 100vw;
+  height: 184px;
+  background-color: #ae0000;
+  border: none;
+  top: 166px;
+  z-index: 10;
+`;
+
+export const Explan3 = styled.div`
   position: relative;
   color: #ffffff;
   font-size: 20px;
