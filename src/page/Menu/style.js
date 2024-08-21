@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Banner = styled.div`
   position: absolute;
   width: 100vw;
-  height: 140px;
+  height: 90px;
   background-color: #ff0000;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@ export const Banner = styled.div`
 export const Team = styled.div`
   position: relative;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 25px;
   font-family: "Pretendard";
   font-weight: 700;
 `;
@@ -47,16 +47,18 @@ export const Img = styled.img`
   display: flex;
   align-items: center;
   left: 75px;
+  width: 123px;
+  height: 81px;
 `;
 
 export const Name = styled.div`
   position: relative;
   color: #232323;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Pretendard";
   font-weight: 700;
-  bottom: 60px;
-  left: 280px;
+  bottom: 40px;
+  left: 230px;
   display: flex;
   align-items: center;
 `;
@@ -68,14 +70,14 @@ export const MenuBox = styled.div`
   display: flex;
   flex-direction: row;
   gap: 55px;
-  top: 190px;
-  left: 70px;
+  top: 120px;
+  left: 50px;
 `;
 
 export const Menu = styled.div`
   position: relative;
   color: #232323;
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Pretendard";
   font-weight: 700;
 `;

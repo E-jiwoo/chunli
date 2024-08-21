@@ -45,7 +45,6 @@ const Index = () => {
         </S.Menu>
         <S.Menu>사이드</S.Menu>
         <S.Menu>음료</S.Menu>
-        <S.Menu>아이스크림</S.Menu>
       </S.MenuBox>
 
       <S.Box1 onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
