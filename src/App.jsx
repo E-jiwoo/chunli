@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import Menu from "./page/Menu/index";
+import Start from "./page/Start/index";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Menu />}></Route>
+          <Route path="/" element={<Start />}></Route>
         </Routes>
       </BrowserRouter>
     </>
