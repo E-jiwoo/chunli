@@ -9,11 +9,14 @@ const index = () => {
       <S.Container>
         <S.Title>아이스트랙킹으로 빠르고 편리하게</S.Title>
         <S.Name>Chun-Li</S.Name>
+        <S.TakeOut>
+          <S.Img src={takeout} alt="takeout" />
+          <S.Text>포장 주문</S.Text>
+        </S.TakeOut>
         <S.TakeIn>
           <S.Img src={takein} alt="takein" />
-          매장 식사
+          <S.Text>매장 식사</S.Text>
         </S.TakeIn>
-        <S.TakeOut>포장 주문</S.TakeOut>
       </S.Container>
     </>
   );

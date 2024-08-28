@@ -8,25 +8,26 @@ export const Container = styled.div`
 
 export const Title = styled.div`
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   color: white;
-  top: 220px;
-  left: 40px;
+  top: 185px;
+  left: 70px;
 `;
 
 export const Name = styled.div`
   position: relative;
-  font-size: 85px;
+  font-size: 75px;
   font-weight: 700;
   color: white;
-  top: 220px;
-  left: 30px;
+  top: 180px;
+  left: 60px;
 `;
 
 export const TakeOut = styled.button`
   position: fixed;
-  padding: 20px 155px 20px 155px;
+  width: 380px;
+  height: 65px;
   border-radius: 20px;
   border: none;
   font-size: 20px;
@@ -39,8 +40,8 @@ export const TakeOut = styled.button`
 
 export const TakeIn = styled.button`
   position: fixed;
-  width: 400px;
-  height: 60px;
+  width: 380px;
+  height: 65px;
   border-radius: 20px;
   border: none;
   font-size: 20px;
@@ -55,6 +56,15 @@ export const Img = styled.img`
   position: relative;
   width: 31px;
   height: 51px;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 20px;
+`;
+
+export const Text = styled.span`
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff0000;
+  bottom: 15px;
+  left: 0px;
 `;
