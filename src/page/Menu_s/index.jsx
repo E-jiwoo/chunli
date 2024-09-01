@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./style";
-import hamburger from "../../assets/hamburger.svg";
+import icecream from "../../assets/icecream.svg";
 import arrow_u from "../../assets/arrow_u.svg";
 import arrow_d from "../../assets/arrow_d.svg";
 
 const Index = () => {
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate(`/Menu_h`);
+  };
   const [arrowState1, setArrowState1] = useState(1);
   const [arrowState2, setArrowState2] = useState(1);
   const [arrowState3, setArrowState3] = useState(1);
@@ -40,15 +45,17 @@ const Index = () => {
       </S.Banner>
       <S.MenuBox>
         <S.Menu>추천메뉴</S.Menu>
+        <S.Menu onClick={onClick}>햄버거</S.Menu>
         <S.Menu>
-          <S.Color>햄버거</S.Color>
+          <S.Color>사이드</S.Color>
+          <S.Line />
         </S.Menu>
-        <S.Menu>사이드</S.Menu>
+
         <S.Menu>음료</S.Menu>
       </S.MenuBox>
 
       <S.Box1 onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
-        <S.Img src={hamburger} alt="hamburger" />
+        <S.Img src={icecream} alt="icecream" />
         <S.Name>햄버거 1</S.Name>
         <S.Arrow src={arrowState1 === 1 ? arrow_u : arrow_d} alt="arrow" />
         {arrowState1 === 0 && (
@@ -64,7 +71,7 @@ const Index = () => {
         )}
       </S.Box1>
       <S.Box2 onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
-        <S.Img src={hamburger} alt="hamburger" />
+        <S.Img src={icecream} alt="icecream" />
         <S.Name>햄버거 2</S.Name>
         <S.Arrow src={arrowState2 === 1 ? arrow_u : arrow_d} alt="arrow" />
         {arrowState2 === 0 && (
@@ -80,7 +87,7 @@ const Index = () => {
         )}
       </S.Box2>
       <S.Box3 onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
-        <S.Img src={hamburger} alt="hamburger" />
+        <S.Img src={icecream} alt="icecream" />
         <S.Name>햄버거 3</S.Name>
         <S.Arrow src={arrowState3 === 1 ? arrow_u : arrow_d} alt="arrow" />
         {arrowState3 === 0 && (

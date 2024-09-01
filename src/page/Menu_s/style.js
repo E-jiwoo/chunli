@@ -18,6 +18,15 @@ export const Team = styled.div`
   font-weight: 700;
 `;
 
+export const Line = styled.div`
+  position: relative;
+  width: 60px;
+  height: 3px;
+  top: 10px;
+  right: 3px;
+  background-color: #ff0000;
+`;
+
 export const Box1 = styled.div`
   position: absolute;
   width: 100vw;
@@ -46,6 +55,7 @@ export const Img = styled.img`
   position: relative;
   display: flex;
   align-items: center;
+  top: 7px;
   left: 55px;
   width: 123px;
   height: 81px;
@@ -69,7 +79,7 @@ export const MenuBox = styled.div`
   position: absolute;
   display: flex;
   flex-direction: row;
-  gap: 55px;
+  gap: 50px;
   top: 120px;
   left: 50px;
 `;
