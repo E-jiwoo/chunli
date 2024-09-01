@@ -203,6 +203,10 @@ export const ListPlus = styled.img`
   height: 17px;
 `;
 
+export const ListBalnk = styled.div`
+  padding-top: 15px;
+`;
+
 export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -223,6 +227,19 @@ export const ModalContent = styled.div`
   border-radius: 15px;
 `;
 
+export const ModalContent2 = styled.div`
+  width: 400px;
+  height: 270px;
+  background-color: #ffffff;
+  border-radius: 15px;
+`;
+export const ModalContent3 = styled.div`
+  width: 400px;
+  height: 160px;
+  background-color: #ffffff;
+  border-radius: 15px;
+`;
+
 export const ModalTitle = styled.h2`
   position: relative;
   font-size: 24px;
@@ -233,6 +250,25 @@ export const ModalTitle = styled.h2`
   margin-bottom: 20px;
 `;
 
+export const ModalTitle2 = styled.h2`
+  position: relative;
+  font-size: 24px;
+  font-family: "Pretendard";
+  font-weight: 700;
+  text-align: center;
+  top: 30px;
+  margin-bottom: 20px;
+`;
+
+export const ModalTitle3 = styled.div`
+  position: relative;
+  font-size: 28px;
+  font-family: "Pretendard";
+  font-weight: 700;
+  text-align: center;
+  top: 45px;
+  margin-bottom: 20px;
+`;
 export const ModalBody = styled.div`
   position: relative;
   font-size: 18px;
@@ -257,7 +293,7 @@ export const ModalTotal = styled.div`
 
 export const ModalButtons = styled.div`
   display: flex;
-  margin-top: 103px;
+  margin-top: 105px;
 `;
 
 export const ModalButton_OK = styled.button`
@@ -273,6 +309,7 @@ export const ModalButton_OK = styled.button`
   cursor: pointer;
   text-align: center;
 `;
+
 export const ModalButton_NO = styled.button`
   width: 60%;
   padding: 15px;
@@ -286,6 +323,23 @@ export const ModalButton_NO = styled.button`
   cursor: pointer;
   text-align: center;
 `;
+
+export const ModalButton_Wait = styled.button`
+  position: relative;
+  top: 60px;
+  width: 100%;
+  padding: 15px;
+  background-color: #ff1e2e;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Pretendard";
+  font-weight: 500;
+  border: none;
+  border-radius: 0px 0px 15px 15px;
+  cursor: pointer;
+  text-align: center;
+`;
+
 export const ModalLine = styled.div`
   position: relative;
   width: 270px;

@@ -18,6 +18,8 @@ const Index = () => {
   const [arrowState3, setArrowState3] = useState(1);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false); // State for payment processing
+  const [waitingNumber, setWaitingNumber] = useState(null); // State for waiting number
 
   const handleMouseEnter1 = () => {
     setArrowState1(0);
@@ -88,7 +90,13 @@ const Index = () => {
   };
 
   const handleCloseModal = () => {
-    setIsModalOpen(false);
+    setIsModalOpen(false); // Close the payment confirmation modal
+    // Trigger payment processing modal for 5 seconds
+    setIsProcessingPayment(true);
+    setTimeout(() => {
+      setIsProcessingPayment(false);
+      setWaitingNumber(200); // Set the waiting number after payment processing
+    }, 5000);
   };
 
   const handleGoBack = () => {
@@ -174,6 +182,7 @@ const Index = () => {
       </S.Box3>
 
       <S.TotalBox hasItems={hasItems}>
+        <S.ListBlank />
         {selectedItems.map((item, index) => (
           <S.List key={index}>
             <S.ListName>{item.name}</S.ListName>
@@ -225,6 +234,23 @@ const Index = () => {
               </S.ModalButton_NO>
             </S.ModalButtons>
           </S.ModalContent>
+        </S.ModalOverlay>
+      )}
+
+      {isProcessingPayment && (
+        <S.ModalOverlay>
+          <S.ModalContent>
+            <S.ModalTitle>신용카드 결제 중...</S.ModalTitle>
+          </S.ModalContent>
+        </S.ModalOverlay>
+      )}
+
+      {waitingNumber && (
+        <S.ModalOverlay>
+          <S.ModalContent3>
+            <S.ModalTitle3>대기번호 {waitingNumber}번</S.ModalTitle3>
+            <S.ModalButton_Wait onClick={handleGoBack}>확인</S.ModalButton_Wait>
+          </S.ModalContent3>
         </S.ModalOverlay>
       )}
     </>
