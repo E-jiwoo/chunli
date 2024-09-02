@@ -235,7 +235,7 @@ export const ModalContent = styled.div`
 
 export const ModalContent2 = styled.div`
   width: 400px;
-  height: 270px;
+  height: 230px;
   background-color: #ffffff;
   border-radius: 15px;
 `;
@@ -274,6 +274,20 @@ export const ModalTitle3 = styled.div`
   text-align: center;
   top: 45px;
   margin-bottom: 20px;
+`;
+export const ModalImg = styled.img`
+  position: relative;
+  left: 120px;
+  width: 150px;
+  height: 150px;
+
+  @keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  animation: blink-effect 2s step-end infinite;
 `;
 export const ModalBody = styled.div`
   position: relative;

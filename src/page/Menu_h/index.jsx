@@ -7,6 +7,7 @@ import arrow_d from "../../assets/arrow_d.svg";
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
 import allergy from "../../assets/allergy.svg";
+import card from "../../assets/card.svg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -242,9 +243,10 @@ const Index = () => {
 
       {isProcessingPayment && (
         <S.ModalOverlay>
-          <S.ModalContent>
+          <S.ModalContent2>
             <S.ModalTitle>신용카드 결제 중...</S.ModalTitle>
-          </S.ModalContent>
+            <S.ModalImg src={card} alt="card" />
+          </S.ModalContent2>
         </S.ModalOverlay>
       )}
 

@@ -29,7 +29,7 @@ export const Explan = styled.div`
   font-size: 16px;
   font-weight: 300;
   color: white;
-  top: 387px;
+  top: 380px;
   left: 60px;
 
   @keyframes blink-effect {
