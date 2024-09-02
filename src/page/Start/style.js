@@ -24,6 +24,23 @@ export const Name = styled.div`
   left: 60px;
 `;
 
+export const Explan = styled.div`
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  top: 387px;
+  left: 60px;
+
+  @keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  animation: blink-effect 3s step-end infinite;
+`;
+
 export const TakeOut = styled.button`
   position: fixed;
   width: 380px;

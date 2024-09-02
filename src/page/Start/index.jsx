@@ -14,6 +14,9 @@ const index = () => {
       <S.Container>
         <S.Title>아이스트랙킹으로 빠르고 편리하게</S.Title>
         <S.Name>Chun-Li</S.Name>
+        <S.Explan>
+          원하는 곳을 쳐다보고 눈을 깜빡이면 터치없이 클릭이 가능!
+        </S.Explan>
         <S.TakeOut onClick={onClick}>
           <S.Img src={takeout} alt="takeout" />
           <S.Text>포장 주문</S.Text>
