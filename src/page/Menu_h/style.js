@@ -60,6 +60,12 @@ export const Img = styled.img`
   height: 81px;
 `;
 
+export const Allergy = styled.img`
+  position: relative;
+  top: 18px;
+  right: 135px;
+`;
+
 export const Name = styled.div`
   position: relative;
   color: #232323;
@@ -144,7 +150,7 @@ export const Explan = styled.div`
   font-family: "Pretendard";
   font-weight: 100;
   text-align: justify;
-  bottom: 8px;
+  bottom: 52px;
   left: 160px;
 `;
 

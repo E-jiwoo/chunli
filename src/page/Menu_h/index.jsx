@@ -6,6 +6,7 @@ import arrow_u from "../../assets/arrow_u.svg";
 import arrow_d from "../../assets/arrow_d.svg";
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
+import allergy from "../../assets/allergy.svg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -90,12 +91,11 @@ const Index = () => {
   };
 
   const handleCloseModal = () => {
-    setIsModalOpen(false); // Close the payment confirmation modal
-    // Trigger payment processing modal for 5 seconds
+    setIsModalOpen(false);
     setIsProcessingPayment(true);
     setTimeout(() => {
       setIsProcessingPayment(false);
-      setWaitingNumber(200); // Set the waiting number after payment processing
+      setWaitingNumber(200);
     }, 5000);
   };
 
@@ -131,6 +131,7 @@ const Index = () => {
         {arrowState1 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>햄버거 1</S.ExplanName>
+            <S.Allergy src={allergy} alt="allergy" />
             <S.Explan>
               100% 순 쇠고기 패티 두 장에 빅맥만의 특별한 소스, <br />
               입안에서 살살 녹는 치즈와 신선한 양상추, <br />
@@ -151,6 +152,7 @@ const Index = () => {
         {arrowState2 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>햄버거 2</S.ExplanName>
+            <S.Allergy src={allergy} alt="allergy" />
             <S.Explan>
               100% 순 쇠고기 패티 두 장에 빅맥만의 특별한 소스, <br />
               입안에서 살살 녹는 치즈와 신선한 양상추, <br />
@@ -171,6 +173,7 @@ const Index = () => {
         {arrowState3 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>햄버거 3</S.ExplanName>
+            <S.Allergy src={allergy} alt="allergy" />
             <S.Explan>
               100% 순 쇠고기 패티 두 장에 빅맥만의 특별한 소스, <br />
               입안에서 살살 녹는 치즈와 신선한 양상추, <br />
