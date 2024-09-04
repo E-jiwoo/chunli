@@ -218,7 +218,9 @@ const Index = () => {
                   <S.Item>
                     <span>{item.name} </span>
                     <S.Blank />
-                    <span>{item.price * item.quantity}원</span>
+                    <span>
+                      {(item.price * item.quantity).toLocaleString()}원
+                    </span>
                     <S.Blank />
                     <span>{item.quantity}개</span>
                   </S.Item>
