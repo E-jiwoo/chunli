@@ -113,6 +113,7 @@ const Index = () => {
         <S.Menu>추천메뉴</S.Menu>
         <S.Menu>
           <S.Color>햄버거</S.Color>
+          <S.Line />
         </S.Menu>
         <S.Menu onClick={onClick}>사이드</S.Menu>
         <S.Menu>음료</S.Menu>
@@ -204,7 +205,7 @@ const Index = () => {
       </S.TotalBox>
 
       <S.PayBtn hasItems={hasItems} onClick={handlePayClick}>
-        결제하기
+        {calculateTotalAmount().toLocaleString()}원 결제하기
       </S.PayBtn>
 
       {isModalOpen && (
