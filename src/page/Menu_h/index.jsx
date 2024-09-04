@@ -18,8 +18,8 @@ const Index = () => {
   const [arrowState3, setArrowState3] = useState(1);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isProcessingPayment, setIsProcessingPayment] = useState(false); // State for payment processing
-  const [waitingNumber, setWaitingNumber] = useState(null); // State for waiting number
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+  const [waitingNumber, setWaitingNumber] = useState(null);
 
   const handleMouseEnter1 = () => {
     setArrowState1(0);

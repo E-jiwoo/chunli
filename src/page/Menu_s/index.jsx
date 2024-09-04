@@ -18,8 +18,8 @@ const Index = () => {
   const [arrowState3, setArrowState3] = useState(1);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isProcessingPayment, setIsProcessingPayment] = useState(false); // State for payment processing
-  const [waitingNumber, setWaitingNumber] = useState(null); // State for waiting number
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+  const [waitingNumber, setWaitingNumber] = useState(null);
 
   const handleMouseEnter1 = () => {
     setArrowState1(0);
@@ -71,7 +71,7 @@ const Index = () => {
           item.name === name ? { ...item, quantity: item.quantity + 1 } : item
         );
       } else {
-        return [...prevItems, { name, price: 3500, quantity: 1 }];
+        return [...prevItems, { name, price: 1800, quantity: 1 }];
       }
     });
   };
@@ -111,10 +111,7 @@ const Index = () => {
       </S.Banner>
       <S.MenuBox>
         <S.Menu>추천메뉴</S.Menu>
-        <S.Menu onClick={onClick}>
-          <S.Color>햄버거</S.Color>
-          <S.Line />
-        </S.Menu>
+        <S.Menu onClick={onClick}>햄버거</S.Menu>
         <S.Menu>
           <S.Color>사이드</S.Color>
           <S.Line />
