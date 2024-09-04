@@ -43,29 +43,29 @@ export const Explan = styled.div`
 
 export const TakeOut = styled.button`
   position: fixed;
-  width: 380px;
+  width: 320px;
   height: 65px;
   border-radius: 20px;
   border: none;
   font-size: 20px;
   font-weight: 700;
   background-color: white;
-  top: 530px;
-  left: 50px;
+  top: 165px;
+  left: 420px;
   color: #ff0000;
 `;
 
 export const TakeIn = styled.button`
   position: fixed;
-  width: 380px;
+  width: 320px;
   height: 65px;
   border-radius: 20px;
   border: none;
   font-size: 20px;
   font-weight: 700;
   background-color: white;
-  top: 610px;
-  left: 50px;
+  top: 245px;
+  left: 420px;
   color: #ff0000;
 `;
 

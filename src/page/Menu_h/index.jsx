@@ -119,6 +119,7 @@ const Index = () => {
         </S.Menu>
         <S.Menu onClick={onClick}>사이드</S.Menu>
         <S.Menu>음료</S.Menu>
+        <S.Menu>이달의 상품</S.Menu>
       </S.MenuBox>
 
       <S.Box1

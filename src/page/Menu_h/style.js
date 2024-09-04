@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Banner = styled.div`
   position: absolute;
   width: 100vw;
-  height: 90px;
+  height: 80px;
   background-color: #ff0000;
   display: flex;
   justify-content: center;
@@ -84,9 +84,9 @@ export const MenuBox = styled.div`
   position: absolute;
   display: flex;
   flex-direction: row;
-  gap: 50px;
-  top: 120px;
-  left: 50px;
+  gap: 70px;
+  top: 110px;
+  left: 105px;
 `;
 
 export const Menu = styled.div`
@@ -94,7 +94,7 @@ export const Menu = styled.div`
   color: #232323;
   font-size: 20px;
   font-family: "Pretendard";
-  font-weight: 700;
+  font-weight: 900;
 `;
 
 export const Arrow = styled.img`
