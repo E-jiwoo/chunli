@@ -29,8 +29,8 @@ export const Explan = styled.div`
   font-size: 16px;
   font-weight: 300;
   color: white;
-  top: 380px;
-  left: 60px;
+  top: 270px;
+  left: 210px;
 
   @keyframes blink-effect {
     50% {
