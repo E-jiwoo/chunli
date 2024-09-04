@@ -18,44 +18,35 @@ export const Team = styled.div`
   font-weight: 700;
 `;
 
-export const Line = styled.div`
-  position: relative;
-  width: 60px;
-  height: 3px;
-  top: 10px;
-  right: 3px;
-  background-color: #ff0000;
-`;
-
 export const Box1 = styled.div`
   position: absolute;
-  width: 100vw;
-  height: 98px;
-  border: 2px #e6e6e6 solid;
-  border-bottom: none;
-  top: 190px;
+  width: 398px;
+  height: 90px;
+  border: 3px #e6e6e6 solid;
+  border-radius: 0px 10px 10px 0px;
+  top: 170px;
 `;
 export const Box2 = styled.div`
   position: absolute;
-  width: 100vw;
-  height: 98px;
-  border: 2px #e6e6e6 solid;
-  border-bottom: none;
-  top: 290px;
+  width: 398px;
+  height: 90px;
+  border: 3px #e6e6e6 solid;
+  border-radius: 0px 10px 10px 0px;
+  top: 270px;
 `;
 export const Box3 = styled.div`
   position: absolute;
-  width: 100vw;
-  height: 98px;
-  border: 2px #e6e6e6 solid;
-  top: 390px;
+  width: 398px;
+  height: 90px;
+  border: 3px #e6e6e6 solid;
+  border-radius: 0px 10px 10px 0px;
+  top: 370px;
 `;
 
 export const Img = styled.img`
   position: relative;
-  display: flex;
-  align-items: center;
-  left: 55px;
+  left: 30px;
+  bottom: 5px;
   width: 123px;
   height: 81px;
 `;
@@ -72,8 +63,8 @@ export const Name = styled.div`
   font-size: 20px;
   font-family: "Pretendard";
   font-weight: 700;
-  bottom: 43px;
-  left: 190px;
+  bottom: 50px;
+  left: 265px;
   display: flex;
   align-items: center;
 `;
@@ -85,7 +76,7 @@ export const MenuBox = styled.div`
   display: flex;
   flex-direction: row;
   gap: 70px;
-  top: 110px;
+  top: 105px;
   left: 105px;
 `;
 
@@ -97,20 +88,10 @@ export const Menu = styled.div`
   font-weight: 900;
 `;
 
-export const Arrow = styled.img`
-  position: relative;
-  width: 18px;
-  height: 9px;
-  bottom: 60px;
-  left: 380px;
-  display: flex;
-  align-items: center;
-`;
-
 export const PayBtn = styled.button`
   position: absolute;
-  width: 383px;
-  height: 69px;
+  width: 352px;
+  height: 75px;
   background-color: ${(props) => (props.hasItems ? "#FF1E2E" : "#e6e6e6")};
   border-radius: 10px;
   border: none;
@@ -118,17 +99,18 @@ export const PayBtn = styled.button`
   font-size: 24px;
   font-family: "Pretendard";
   font-weight: 500;
-  left: 55px;
-  bottom: 40px;
+  left: 425px;
+  bottom: 15px;
 `;
 
 export const ExplanBox = styled.button`
   position: absolute;
-  width: 100vw;
-  height: 98px;
+  width: 398px;
+  height: 90px;
   background-color: #ae0000;
-  border: none;
-  top: 100px;
+  border: 3px #ae0000 solid;
+  border-radius: 0px 10px 10px 0px;
+  top: 0px;
   z-index: 10;
 `;
 
@@ -139,29 +121,29 @@ export const ExplanName = styled.div`
   font-family: "Pretendard";
   font-weight: 400;
   text-align: justify;
-  top: 15px;
-  left: 70px;
+  top: 12px;
+  left: 25px;
 `;
 
 export const Explan = styled.div`
   position: relative;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Pretendard";
   font-weight: 100;
   text-align: justify;
-  bottom: 53px;
-  left: 160px;
+  bottom: 55px;
+  left: 120px;
 `;
 
 export const TotalBox = styled.div`
   position: absolute;
-  width: 383px;
-  height: 125px;
+  width: 352px;
+  height: 198px;
   border: 3px ${(props) => (props.hasItems ? "#FF1E2E" : "#e6e6e6")} solid;
   border-radius: 20px;
-  bottom: 120px;
-  right: 40px;
+  bottom: 107px;
+  right: 20px;
 `;
 
 export const ListBlank = styled.div`
@@ -170,8 +152,8 @@ export const ListBlank = styled.div`
 export const List = styled.div`
   position: relative;
   display: flex;
-  padding-top: 10px;
-  padding-left: 35px;
+  padding-top: 15px;
+  padding-left: 30px;
 `;
 export const ListName = styled.div`
   color: #000000;
@@ -189,7 +171,7 @@ export const ListMoney = styled.div`
 
 export const ListMinus = styled.img`
   padding-top: 1px;
-  padding-left: 80px;
+  padding-left: 55px;
   width: 17px;
   height: 17px;
 `;

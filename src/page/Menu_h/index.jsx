@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 import hamburger from "../../assets/hamburger.svg";
-import arrow_u from "../../assets/arrow_u.svg";
-import arrow_d from "../../assets/arrow_d.svg";
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
 import allergy from "../../assets/allergy.svg";
@@ -115,7 +113,6 @@ const Index = () => {
         <S.Menu>추천메뉴</S.Menu>
         <S.Menu>
           <S.Color>햄버거</S.Color>
-          <S.Line />
         </S.Menu>
         <S.Menu onClick={onClick}>사이드</S.Menu>
         <S.Menu>음료</S.Menu>
@@ -129,7 +126,6 @@ const Index = () => {
       >
         <S.Img src={hamburger} alt="hamburger" />
         <S.Name>햄버거 1</S.Name>
-        <S.Arrow src={arrowState1 === 1 ? arrow_u : arrow_d} alt="arrow" />
         {arrowState1 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>햄버거 1</S.ExplanName>
@@ -150,7 +146,6 @@ const Index = () => {
       >
         <S.Img src={hamburger} alt="hamburger" />
         <S.Name>햄버거 2</S.Name>
-        <S.Arrow src={arrowState2 === 1 ? arrow_u : arrow_d} alt="arrow" />
         {arrowState2 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>햄버거 2</S.ExplanName>
@@ -171,7 +166,6 @@ const Index = () => {
       >
         <S.Img src={hamburger} alt="hamburger" />
         <S.Name>햄버거 3</S.Name>
-        <S.Arrow src={arrowState3 === 1 ? arrow_u : arrow_d} alt="arrow" />
         {arrowState3 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>햄버거 3</S.ExplanName>
@@ -191,7 +185,9 @@ const Index = () => {
         {selectedItems.map((item, index) => (
           <S.List key={index}>
             <S.ListName>{item.name}</S.ListName>
-            <S.ListMoney>{item.price * item.quantity}원</S.ListMoney>
+            <S.ListMoney>
+              {(item.price * item.quantity).toLocaleString()}원
+            </S.ListMoney>
             <S.ListMinus
               src={minus}
               alt="minus"
@@ -228,7 +224,9 @@ const Index = () => {
                 </div>
               ))}
               <S.ModalLine />
-              <S.ModalTotal>총 금액 {calculateTotalAmount()}원</S.ModalTotal>
+              <S.ModalTotal>
+                총 금액 {calculateTotalAmount().toLocaleString()}원
+              </S.ModalTotal>
             </S.ModalBody>
             <S.ModalButtons>
               <S.ModalButton_OK onClick={handleCloseModal}>
