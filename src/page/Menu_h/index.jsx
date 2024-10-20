@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 import hamburger from "../../assets/hamburger.svg";
@@ -7,43 +7,82 @@ import plus from "../../assets/plus.svg";
 import allergy from "../../assets/allergy.svg";
 import card from "../../assets/card.svg";
 
-const Index = () => {
+const Index = ({
+  arrowState1,
+  setArrowState1,
+  arrowState2,
+  setArrowState2,
+  arrowState3,
+  setArrowState3,
+}) => {
   const navigate = useNavigate();
   const onClick = () => {
     navigate(`/menu_s`);
   };
-
-  const [arrowState1, setArrowState1] = useState(1);
-  const [arrowState2, setArrowState2] = useState(1);
-  const [arrowState3, setArrowState3] = useState(1);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [waitingNumber, setWaitingNumber] = useState(null);
 
-  const handleMouseEnter1 = () => {
-    setArrowState1(0);
-  };
+  useEffect(() => {
+    const handleMouseEnter = () => {
+      setArrowState1(0); // 검은 점이 햄버거 영역에 들어왔을 때 arrowState1을 0으로 설정
+    };
 
-  const handleMouseLeave1 = () => {
-    setArrowState1(1);
-  };
+    const handleMouseLeave = () => {
+      setArrowState1(1); // 검은 점이 햄버거 영역에서 나갔을 때 arrowState1을 1로 설정
+    };
 
-  const handleMouseEnter2 = () => {
-    setArrowState2(0);
-  };
+    const handleMouseEnter2 = () => {
+      setArrowState2(0);
+    };
 
-  const handleMouseLeave2 = () => {
-    setArrowState2(1);
-  };
+    const handleMouseLeave2 = () => {
+      setArrowState2(1);
+    };
 
-  const handleMouseEnter3 = () => {
-    setArrowState3(0);
-  };
+    const handleMouseEnter3 = () => {
+      setArrowState3(0);
+    };
 
-  const handleMouseLeave3 = () => {
-    setArrowState3(1);
-  };
+    const handleMouseLeave3 = () => {
+      setArrowState3(1);
+    };
+
+    // 햄버거 박스에 마우스 이벤트 리스너 추가
+    const box1 = document.querySelector(".menu-element"); // 클래스 이름 확인
+    if (box1) {
+      box1.addEventListener("mouseenter", handleMouseEnter);
+      box1.addEventListener("mouseleave", handleMouseLeave);
+    }
+    const box2 = document.querySelector(".menu2-element"); // 클래스 이름 확인
+    if (box2) {
+      box2.addEventListener("mouseenter", handleMouseEnter2);
+      box2.addEventListener("mouseleave", handleMouseLeave2);
+    }
+    const box3 = document.querySelector(".menu3-element"); // 클래스 이름 확인
+    if (box3) {
+      box3.addEventListener("mouseenter", handleMouseEnter3);
+      box3.addEventListener("mouseleave", handleMouseLeave3);
+    }
+
+    // 컴포넌트 언마운트 시 이벤트 리스너 제거
+    return () => {
+      if (box1) {
+        box1.removeEventListener("mouseenter", handleMouseEnter);
+        box1.removeEventListener("mouseleave", handleMouseLeave);
+        setArrowState1(); // Ensure setArrowState1 is called when box1 is removed
+      } else if (box2) {
+        box2.removeEventListener("mouseenter", handleMouseEnter2);
+        box2.removeEventListener("mouseleave", handleMouseLeave2);
+        setArrowState2(); // Call setArrowState2 for box2
+      } else if (box3) {
+        box3.removeEventListener("mouseenter", handleMouseEnter3);
+        box3.removeEventListener("mouseleave", handleMouseLeave3);
+        setArrowState3(); // Call setArrowState3 for box3
+      }
+    };
+  }, [setArrowState1, setArrowState2, setArrowState3]);
 
   const handlePlus = (itemName) => {
     setSelectedItems((prevItems) =>
@@ -122,8 +161,6 @@ const Index = () => {
 
       <S.Box1
         className="menu-element" // 클래스명을 추가하여 App.jsx에서 참조할 수 있도록 함
-        onMouseEnter={handleMouseEnter1}
-        onMouseLeave={handleMouseLeave1}
         onClick={() => handleAddItem("햄버거 1")}
       >
         <S.Img src={hamburger} alt="hamburger" />
@@ -142,8 +179,7 @@ const Index = () => {
         )}
       </S.Box1>
       <S.Box2
-        onMouseEnter={handleMouseEnter2}
-        onMouseLeave={handleMouseLeave2}
+        className="menu2-element"
         onClick={() => handleAddItem("햄버거 2")}
       >
         <S.Img src={hamburger} alt="hamburger" />
@@ -162,8 +198,7 @@ const Index = () => {
         )}
       </S.Box2>
       <S.Box3
-        onMouseEnter={handleMouseEnter3}
-        onMouseLeave={handleMouseLeave3}
+        className="menu3-element"
         onClick={() => handleAddItem("햄버거 3")}
       >
         <S.Img src={hamburger} alt="hamburger" />

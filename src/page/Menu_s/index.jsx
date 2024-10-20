@@ -1,49 +1,88 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 import icecream from "../../assets/icecream.svg";
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
-import allergy from "../../assets/allergy.svg";
+import milk from "../../assets/milk.svg";
 import card from "../../assets/card.svg";
 
-const Index = () => {
+const Index = ({
+  arrowState4,
+  setArrowState4,
+  arrowState5,
+  setArrowState5,
+  arrowState6,
+  setArrowState6,
+}) => {
   const navigate = useNavigate();
   const onClick = () => {
     navigate(`/menu_h`);
   };
-
-  const [arrowState1, setArrowState1] = useState(1);
-  const [arrowState2, setArrowState2] = useState(1);
-  const [arrowState3, setArrowState3] = useState(1);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [waitingNumber, setWaitingNumber] = useState(null);
 
-  const handleMouseEnter1 = () => {
-    setArrowState1(0);
-  };
+  useEffect(() => {
+    const handleMouseEnter4 = () => {
+      setArrowState4(0); // 검은 점이 아이스크림 영역에 들어왔을 때 arrowState4을 0으로 설정
+    };
 
-  const handleMouseLeave1 = () => {
-    setArrowState1(1);
-  };
+    const handleMouseLeave4 = () => {
+      setArrowState4(1); // 검은 점이 아이스크림 영역에서 나갔을 때 arrowState4을 1로 설정
+    };
 
-  const handleMouseEnter2 = () => {
-    setArrowState2(0);
-  };
+    const handleMouseEnter5 = () => {
+      setArrowState5(0);
+    };
 
-  const handleMouseLeave2 = () => {
-    setArrowState2(1);
-  };
+    const handleMouseLeave5 = () => {
+      setArrowState5(1);
+    };
 
-  const handleMouseEnter3 = () => {
-    setArrowState3(0);
-  };
+    const handleMouseEnter6 = () => {
+      setArrowState6(0);
+    };
 
-  const handleMouseLeave3 = () => {
-    setArrowState3(1);
-  };
+    const handleMouseLeave6 = () => {
+      setArrowState6(1);
+    };
+
+    // 아이스크림 박스에 마우스 이벤트 리스너 추가
+    const box4 = document.querySelector(".menu4-element"); // 클래스 이름 확인
+    if (box4) {
+      box4.addEventListener("mouseenter", handleMouseEnter4);
+      box4.addEventListener("mouseleave", handleMouseLeave4);
+    }
+    const box5 = document.querySelector(".menu5-element"); // 클래스 이름 확인
+    if (box5) {
+      box5.addEventListener("mouseenter", handleMouseEnter5);
+      box5.addEventListener("mouseleave", handleMouseLeave5);
+    }
+    const box6 = document.querySelector(".menu6-element"); // 클래스 이름 확인
+    if (box6) {
+      box6.addEventListener("mouseenter", handleMouseEnter6);
+      box6.addEventListener("mouseleave", handleMouseLeave6);
+    }
+
+    // 컴포넌트 언마운트 시 이벤트 리스너 제거
+    return () => {
+      if (box4) {
+        box4.removeEventListener("mouseenter", handleMouseEnter4);
+        box4.removeEventListener("mouseleave", handleMouseLeave4);
+        setArrowState4(); // Ensure setArrowState4 is called when box4 is removed
+      } else if (box5) {
+        box5.removeEventListener("mouseenter", handleMouseEnter5);
+        box5.removeEventListener("mouseleave", handleMouseLeave5);
+        setArrowState5(); // Call setArrowState5 for box5
+      } else if (box6) {
+        box6.removeEventListener("mouseenter", handleMouseEnter6);
+        box6.removeEventListener("mouseleave", handleMouseLeave6);
+        setArrowState6(); // Call setArrowState6 for box6
+      }
+    };
+  }, [setArrowState4, setArrowState5, setArrowState6]);
 
   const handlePlus = (itemName) => {
     setSelectedItems((prevItems) =>
@@ -71,7 +110,7 @@ const Index = () => {
           item.name === name ? { ...item, quantity: item.quantity + 1 } : item
         );
       } else {
-        return [...prevItems, { name, price: 1800, quantity: 1 }];
+        return [...prevItems, { name, price: 3500, quantity: 1 }];
       }
     });
   };
@@ -111,78 +150,69 @@ const Index = () => {
       </S.Banner>
       <S.MenuBox>
         <S.Menu>추천메뉴</S.Menu>
-        <S.Menu onClick={onClick}>햄버거</S.Menu>
         <S.Menu>
-          <S.Color>사이드</S.Color>
+          <S.Color>아이스크림</S.Color>
           <S.Line />
         </S.Menu>
+        <S.Menu onClick={onClick}>사이드</S.Menu>
         <S.Menu>음료</S.Menu>
         <S.Menu>이달의 상품</S.Menu>
       </S.MenuBox>
 
-      <S.Box1
-        className="target" // target 클래스 추가
-        onMouseEnter={() => setArrowState1(0)} // 상태 업데이트
-        onMouseLeave={() => setArrowState1(1)} // 상태 업데이트
+      <S.Box4
+        className="menu4-element" // 클래스명을 추가하여 App.jsx에서 참조할 수 있도록 함
         onClick={() => handleAddItem("아이스크림 1")}
       >
         <S.Img src={icecream} alt="icecream" />
         <S.Name>아이스크림 1</S.Name>
-        {arrowState1 === 0 && (
+        {arrowState4 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>아이스크림 1</S.ExplanName>
-            <S.Allergy src={allergy} alt="allergy" />
+            <S.Milk src={milk} alt="milk" />
             <S.Explan>
-              100% 순 쇠고기 패티 두 장에 빅맥만의 특별한 소스, <br />
-              입안에서 살살 녹는 치즈와 신선한 양상추, <br />
-              양파, 그리고 피클까지, 40년 넘게 전 세계인의
-              <br /> 입맛을 사로잡은 버거의 대명사
+              칼로리 144kcal <br />
+              나트륨 55mg 당 15g <br />
+              단백질 3g 포화지방 2.5g
             </S.Explan>
           </S.ExplanBox>
         )}
-      </S.Box1>
-      <S.Box2
-        className="target" // target 클래스 추가
-        onMouseEnter={handleMouseEnter2}
-        onMouseLeave={handleMouseLeave2}
+      </S.Box4>
+      <S.Box5
+        className="menu5-element"
         onClick={() => handleAddItem("아이스크림 2")}
       >
         <S.Img src={icecream} alt="icecream" />
         <S.Name>아이스크림 2</S.Name>
-        {arrowState2 === 0 && (
+        {arrowState5 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>아이스크림 2</S.ExplanName>
-            <S.Allergy src={allergy} alt="allergy" />
+            <S.Milk src={milk} alt="milk" />
             <S.Explan>
-              100% 순 쇠고기 패티 두 장에 빅맥만의 특별한 소스, <br />
-              입안에서 살살 녹는 치즈와 신선한 양상추, <br />
-              양파, 그리고 피클까지, 40년 넘게 전 세계인의
-              <br /> 입맛을 사로잡은 버거의 대명사
+              칼로리 144kcal <br />
+              나트륨 55mg 당 15g <br />
+              단백질 3g 포화지방 2.5g
             </S.Explan>
           </S.ExplanBox>
         )}
-      </S.Box2>
-      <S.Box3
-        className="target" // target 클래스 추가
-        onMouseEnter={handleMouseEnter3}
-        onMouseLeave={handleMouseLeave3}
+      </S.Box5>
+      <S.Box6
+        className="menu6-element"
         onClick={() => handleAddItem("아이스크림 3")}
       >
         <S.Img src={icecream} alt="icecream" />
         <S.Name>아이스크림 3</S.Name>
-        {arrowState3 === 0 && (
+        {arrowState6 === 0 && (
           <S.ExplanBox>
             <S.ExplanName>아이스크림 3</S.ExplanName>
-            <S.Allergy src={allergy} alt="allergy" />
+            <S.Milk src={milk} alt="milk" />
             <S.Explan>
-              100% 순 쇠고기 패티 두 장에 빅맥만의 특별한 소스, <br />
-              입안에서 살살 녹는 치즈와 신선한 양상추, <br />
-              양파, 그리고 피클까지, 40년 넘게 전 세계인의
-              <br /> 입맛을 사로잡은 버거의 대명사
+              칼로리 144kcal <br />
+              나트륨 55mg 당 15g <br />
+              단백질 3g 포화지방 2.5g
             </S.Explan>
           </S.ExplanBox>
         )}
-      </S.Box3>
+      </S.Box6>
 
       <S.TotalBox hasItems={hasItems}>
         <S.ListBlank />

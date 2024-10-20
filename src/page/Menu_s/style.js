@@ -26,7 +26,7 @@ export const Line = styled.div`
   right: 3px;
   background-color: #ff0000;
 `;
-export const Box1 = styled.div`
+export const Box4 = styled.div`
   position: absolute;
   width: 398px;
   height: 90px;
@@ -34,7 +34,7 @@ export const Box1 = styled.div`
   border-radius: 0px 10px 10px 0px;
   top: 170px;
 `;
-export const Box2 = styled.div`
+export const Box5 = styled.div`
   position: absolute;
   width: 398px;
   height: 90px;
@@ -42,7 +42,7 @@ export const Box2 = styled.div`
   border-radius: 0px 10px 10px 0px;
   top: 270px;
 `;
-export const Box3 = styled.div`
+export const Box6 = styled.div`
   position: absolute;
   width: 398px;
   height: 90px;
@@ -59,10 +59,12 @@ export const Img = styled.img`
   height: 76px;
 `;
 
-export const Allergy = styled.img`
+export const Milk = styled.img`
   position: relative;
-  top: 17px;
-  right: 135px;
+  top: 20px;
+  right: 128px;
+  width: 35px;
+  height: 35px;
 `;
 
 export const Name = styled.div`
@@ -140,8 +142,8 @@ export const Explan = styled.div`
   font-family: "Pretendard";
   font-weight: 100;
   text-align: justify;
-  bottom: 55px;
-  left: 120px;
+  bottom: 32px;
+  left: 145px;
 `;
 
 export const TotalBox = styled.div`
