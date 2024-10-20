@@ -121,8 +121,9 @@ const Index = () => {
       </S.MenuBox>
 
       <S.Box1
-        onMouseEnter={handleMouseEnter1}
-        onMouseLeave={handleMouseLeave1}
+        className="target" // target 클래스 추가
+        onMouseEnter={() => setArrowState1(0)} // 상태 업데이트
+        onMouseLeave={() => setArrowState1(1)} // 상태 업데이트
         onClick={() => handleAddItem("아이스크림 1")}
       >
         <S.Img src={icecream} alt="icecream" />
@@ -141,6 +142,7 @@ const Index = () => {
         )}
       </S.Box1>
       <S.Box2
+        className="target" // target 클래스 추가
         onMouseEnter={handleMouseEnter2}
         onMouseLeave={handleMouseLeave2}
         onClick={() => handleAddItem("아이스크림 2")}
@@ -161,6 +163,7 @@ const Index = () => {
         )}
       </S.Box2>
       <S.Box3
+        className="target" // target 클래스 추가
         onMouseEnter={handleMouseEnter3}
         onMouseLeave={handleMouseLeave3}
         onClick={() => handleAddItem("아이스크림 3")}

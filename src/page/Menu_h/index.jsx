@@ -121,6 +121,7 @@ const Index = () => {
       </S.MenuBox>
 
       <S.Box1
+        className="menu-element" // 클래스명을 추가하여 App.jsx에서 참조할 수 있도록 함
         onMouseEnter={handleMouseEnter1}
         onMouseLeave={handleMouseLeave1}
         onClick={() => handleAddItem("햄버거 1")}
