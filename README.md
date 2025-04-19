@@ -1,8 +1,17 @@
-# React + Vite
+# 시선 제어 기반 키오스크
+![668shots_so (1)](https://github.com/user-attachments/assets/5ccba1bb-3796-41b7-9b0d-c8187427f534)
+## Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+눈에띄네는 시선 제어를 활용한 사용자 친화적 키오스크 시스템입니다.
+<br/>
+## Pain Point
 
-Currently, two official plugins are available:
+최근 키오스크가 매장에서 빠르게 도입되어 효율적인 결제 시스템으로 자리 잡고 있지만, 고령층과 디지털 기기에 익숙하지 않은 사용자에게는 여전히 어려움이 많습니다. 
+<br/>
+과거에는 계산원과의 상황 작용을 통해 제품 설명과 결제를 도와주었지만, 키오스크의 도입으로 이러한 소통이 줄어들며 고객의 불편이 증가하고 있습니다. 특히 고령층은 메뉴 선택이나 결제 과정에서 혼란을 겪고, **제품 설명 부족**으로 어려움을 느끼는 경우가 많습니다. 
+<br/>
+##  Solution
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**사용자 친화적인 키오스크 시스템**을 구축하는 것을 목표로 하고 있습니다. 
+<br/>
+특히 아이트랙킹 기술을 도입해 사용자의 시선을 분석하고, 이를 바탕으로 제품 설명을 제공함으로써 모든 연령층이 키오스크를 쉽게 이용할 수 있는 시스템, **눈에띄네**를 개발하였습니다.
